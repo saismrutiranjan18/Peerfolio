@@ -3,8 +3,8 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
-import postRoutes from "./Routes/PostRoute.js";
-import userRoutes from "./Routes/UserRoute.js";
+import postRoutes from "./routes/PostRoute.js";
+import userRoutes from "./routes/UserRoute.js";
 
 const app = express();
 
