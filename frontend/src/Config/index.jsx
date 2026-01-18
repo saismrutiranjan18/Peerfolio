@@ -3,7 +3,7 @@
 
 const { default: axios } = require("axios");
 
-export const BASE_URL = "http://localhost:5000/api/v1/";
+export const BASE_URL = "https://peerfolio-rd5x.onrender.com/";
 
 const clientServer = axios.create({
   baseURL: BASE_URL,
