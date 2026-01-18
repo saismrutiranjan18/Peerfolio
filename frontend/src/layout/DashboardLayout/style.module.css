@@ -1,0 +1,215 @@
+.dashboardWrapper {
+  display: grid;
+  grid-template-columns: 18% 1fr 22%;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  min-height: 100vh;
+  background: #f4f6f9;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Left Sidebar */
+.sidebarLeft {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.navItem {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navItem:hover {
+  color: #0072ff;
+  transform: translateX(5px);
+}
+
+/* ✅ Main Feed */
+.mainFeed {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-height: 80vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Right Sidebar */
+.sidebarRight {
+  flex: 0.25;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  min-width: 250px;
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* ✅ Profile Card */
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profileCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profileCard img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0072ff;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.profileInfo p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profileInfo span {
+  font-size: 0.8rem;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profileInfo small {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.noProfiles {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
+
+/* 🔹 RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboardWrapper {
+    grid-template-columns: 22% 1fr;
+  }
+
+  .sidebarRight {
+    display: none; /* hide right sidebar */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboardWrapper {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+  }
+
+  /* Left sidebar turns into bottom nav */
+  .sidebarLeft {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+  }
+
+  .logo {
+    display: none; /* hide logo on mobile bottom nav */
+  }
+
+  .navMenu {
+    flex-direction: row;
+    gap: 1.2rem;
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navItem {
+    font-size: 1.2rem; /* bigger for tap */
+    transform: none !important;
+  }
+
+  .mainFeed {
+    margin-bottom: 70px; /* space for bottom nav */
+  }
+}

@@ -1,0 +1,266 @@
+/* Banner Section */
+.banner {
+  position: relative;
+  width: 100%; /* full width */
+  height: 16rem;
+  border-radius: 0.75rem;
+  overflow: visible; /* hide overflow for image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Banner Image */
+.banner img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the banner without distortion */
+  z-index: 0;
+}
+
+/* Banner Text */
+.bannerText {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+/* Profile Picture */
+.profilePic {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  position: absolute;
+  left: 2rem;
+  bottom: -4.5rem; /* exactly half of height to show full circle */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  z-index: 10;
+}
+
+/* Container */
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 6rem; /* extra margin so profilePic doesn’t overlap */
+}
+
+/* Left Column */
+.leftColumn {
+  flex: 2;
+  min-width: 280px;
+}
+
+/* Right Column */
+.rightColumn {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Profile Info */
+.profileInfo {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profileName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.profileEmail {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Open to Work - your own profile */
+.openToWorkBtn {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* warm gradient */
+  color: #fff;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.openToWorkBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+}
+
+/* Connect button - for sending requests */
+.connectBtn {
+  background: #6c63ff; /* unique purple */
+  color: #fff;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connectBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Pending button */
+.pendingBtn {
+  background: #ff9f43; /* orange */
+  color: #fff;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: not-allowed;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
+
+/* Connected button */
+.connectedBtn {
+  background: #2ed573; /* green */
+  color: #fff;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: not-allowed;
+  opacity: 0.95;
+  margin-top: 1rem;
+}
+
+/* Section Cards */
+.section {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.sectionItem {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Resume Button */
+.resumeBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #6c63ff;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid pink;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resumeBtn:hover {
+  background: #004182;
+  transform: translateY(-2px);
+}
+
+/* Recent Activity Section */
+.activityCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  background: #fafafa;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activityCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.activityMedia {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityBody {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.4;
+}
+
+.activityDate {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .banner {
+    height: 10rem;
+  }
+
+  .profilePic {
+    width: 7rem;
+    height: 7rem;
+    bottom: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .profileContainer {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    min-width: 100%;
+  }
+}

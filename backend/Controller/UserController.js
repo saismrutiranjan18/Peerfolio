@@ -1,12 +1,12 @@
 import bcrypt from "bcrypt";
-import User from "../models/UserModel.js";
-import Profile from "../models/ProfileModel.js";
+import User from "../Models/UserModel.js";
+import Profile from "../Models/ProfileModel.js";
 import crypto from "crypto";
 import PDFDocument from "pdfkit";
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
-import connectionRequest from "../models/ConnectionModel.js";
+import connectionRequest from "../Models/ConnectionModel.js";
 
 export const convertUserDataToPdf = async (userData) => {
   const doc = new PDFDocument();

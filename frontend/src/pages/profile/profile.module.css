@@ -1,0 +1,282 @@
+/* Banner Section */
+.banner {
+  position: relative;
+  width: 100%; /* full width */
+  height: 16rem;
+  border-radius: 0.75rem;
+  overflow: visible; /* hide overflow for image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Banner Image */
+.banner img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover the banner without distortion */
+  z-index: 0;
+}
+
+/* Banner Text */
+.bannerText {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+/* Profile Picture Container */
+.profilePicContainer {
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 10rem;
+}
+
+.profilePic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profilePicContainer:hover .profilePic {
+  transform: scale(1.05);
+}
+
+/* Upload Icon */
+.uploadIcon {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.2rem;
+  background: #ff6b81;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.uploadIcon:hover {
+  transform: scale(1.2);
+  background: #ff4757;
+}
+
+.fileInput {
+  display: none;
+}
+
+/* Container */
+.profileContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+
+/* Left Column */
+.leftColumn {
+  flex: 2;
+  min-width: 280px;
+}
+
+/* Right Column */
+.rightColumn {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Profile Info */
+.profileInfo {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profileName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.profileEmail {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Bio Input */
+.bioInput {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  resize: vertical;
+  min-height: 80px;
+  font-size: 0.95rem;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.bioInput:focus {
+  outline: none;
+  border-color: #6a11cb;
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.2);
+}
+
+/* Section Cards */
+.section {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Section Items */
+.sectionItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputField {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #2575fc;
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.2);
+}
+
+/* Add Button */
+.addBtn {
+  background: #6c63ff;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.addBtn:hover {
+  background: magenta;
+  transform: scale(1.05);
+}
+
+/* Update Profile Button */
+.updateBtn {
+  width: 100%;
+  background: #ef8897;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.updateBtn:hover {
+  background: #ff4757;
+  transform: scale(1.03);
+}
+
+/* Recent Activity Section */
+.activityCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  background: #fefefe;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activityCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.activityMedia {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityBody {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.4;
+}
+
+.activityDate {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profilePicContainer {
+    bottom: -4rem;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .banner {
+    height: 12rem;
+    font-size: 1.5rem;
+  }
+}
